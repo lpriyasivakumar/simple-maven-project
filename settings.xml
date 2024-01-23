@@ -1,0 +1,26 @@
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 https://maven.apache.org/xsd/settings-1.0.0.xsd">
+  <localRepository/>
+  <interactiveMode/>
+  <offline/>
+  <pluginGroups/>
+  <servers/>
+  <mirrors/>
+  <proxies/>
+  <profiles>
+    <profile>
+      <id>test-profile</id>
+        <repositories>
+          <repository>
+            <id>central</id>
+            <name>Nexus Releases</name>
+            <url>http://localhost:8081/nexus/service/local/staging/deploy/maven2</url>
+          </repository>   
+        </repositories>
+     </profile>   
+  </profiles>
+  <activeProfiles>
+    <activeProfile>test-profile</activeProfile>
+  </activeProfiles>  
+</settings>
+

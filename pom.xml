@@ -12,23 +12,30 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
-  <distributionManagement>
+  <repositories>
     <repository>
       <id>nexus</id>
       <name>Nexus Releases</name>
       <url>http://localhost:8081/nexus/service/local/staging/deploy/maven2</url>
+    </repository>   
+    <repository>
+      <id>central</id>
+      <name>redhat-central</name>
+      <url>https://maven.repository.redhat.com/ga/</url>
     </repository>
-    <snapshotRepository>
+  </repositories>
+  <pluginRepositories>
+    <pluginRepository>
       <id>nexus</id>
-      <name>Nexus Snapshot</name>
-      <url>http://localhost:8081/nexus/content/repositories/snapshots</url>
-    </snapshotRepository>
-    <site>
-      <id>nexus</id>
-      <name>Nexus Sites</name>
-      <url>dav:http://localhost:8081/nexus/content/sites/site/</url>
-    </site>
-  </distributionManagement>
+      <name>Nexus Releases</name>
+      <url>http://localhost:8081/nexus/service/local/staging/deploy/maven2</url>
+    </pluginRepository>   
+    <pluginRepository>
+      <id>central</id>
+      <name>redhat-central</name>
+      <url>https://maven.repository.redhat.com/ga/</url>
+    </pluginRepository>
+  </pluginRepositories>    
   <build>
     <plugins>
       <plugin>
